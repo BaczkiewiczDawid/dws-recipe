@@ -1,6 +1,8 @@
+import RecipeList from 'components/oragnisms/RecipeList/RecipeList';
+
 const Dashboard = () => {
     return ( 
-        <div>Dashboard</div>
+        <RecipeList />
      );
 }
  
