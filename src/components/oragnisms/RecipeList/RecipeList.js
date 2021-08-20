@@ -1,9 +1,10 @@
 import RecipeListItem from 'components/molecules/RecipeListItem/RecipeListItem';
+import { StyledTitle } from './RecipeList.styles'
 
 const RecipeList = () => {
     return ( 
         <div>
-            <h1>Recipes</h1>
+            <StyledTitle>Recipes</StyledTitle>
             <RecipeListItem />
         </div>
      );
