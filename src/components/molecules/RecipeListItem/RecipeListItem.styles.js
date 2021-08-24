@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
     border-bottom: 1px solid rgba(42, 42, 42, .2);
-    margin-left: 20vw;
     width: 400px;
     height: auto;
     cursor: pointer;

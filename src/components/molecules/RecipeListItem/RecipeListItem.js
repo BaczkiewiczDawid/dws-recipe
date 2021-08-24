@@ -1,11 +1,9 @@
 import React from 'react';
-import recipes from 'data/data';
 import { StyledWrapper, StyledTitle, StyledParagraph } from './RecipeListItem.styles';
 
-const RecipeListItem = ({ recipeData: { name, level, id } }) => {
+const RecipeListItem = ({ recipeData: { name, level, id }, setSelectedRecipe }) => {
     const showDetails = (id) => {
-        const selectedRecipe = recipes[id - 1];
-        console.log(selectedRecipe)
+        setSelectedRecipe(id - 1);
       }
 
     return ( 

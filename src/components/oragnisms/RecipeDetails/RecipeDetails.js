@@ -1,17 +1,20 @@
-const RecipeDetails = () => {
+import recipes from 'data/data';
+import { StyledPreparation, StyledTitle, StyledHeader } from './RecipeDetails.styled';
+
+const RecipeDetails = ({selectedRecipe}) => {
     return ( 
         <div>
-            <h1>Details</h1>
+            <StyledHeader>Details</StyledHeader>
             <div>
-                <h2>Ingredients</h2>
+                <StyledTitle>Ingredients</StyledTitle>
                 <ul>
-                    <li>eggs</li>
-                    <li>salt</li>
+                    {recipes[selectedRecipe].ingredients.map((ingredient) => (
+                        <li>{ingredient}</li>
+                    ))}
                 </ul>
             </div>
-            <div>Preparation</div>
-            <p>asdasd</p>
-            <button>Read more</button>
+            <StyledTitle>Preparation</StyledTitle>
+            <StyledPreparation>{recipes[selectedRecipe].preparation}</StyledPreparation>
         </div>
      );
 }
