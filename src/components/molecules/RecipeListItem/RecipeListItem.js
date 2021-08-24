@@ -1,21 +1,17 @@
-import React, { useContext } from 'react';
-import recipes from 'data/data';
+import React from 'react';
 import { StyledWrapper, StyledTitle, StyledParagraph } from './RecipeListItem.styles';
-import { RecipeContext } from 'providers/RecipeProvider';
 
-const RecipeListItem = () => {
-    const { showDetails } = useContext(RecipeContext)
+const RecipeListItem = ({ recipeData: { name, level, id }, setSelectedRecipe }) => {
+    const showDetails = (id) => {
+        setSelectedRecipe(id - 1);
+      }
 
     return ( 
         <>
-            {recipes.map((recipe) => (
-                <StyledWrapper id={recipe.id} onClick={() => showDetails(recipe.id)}>
-                    <StyledTitle>{recipe.name}</StyledTitle>
-                    <StyledParagraph>Level: {recipe.level}</StyledParagraph>
-                </StyledWrapper>
-
-
-        ))}
+            <StyledWrapper onClick={() => showDetails(id)}>
+                <StyledTitle>{name}</StyledTitle>
+                <StyledParagraph>Level: {level}</StyledParagraph>
+            </StyledWrapper>
         </>
      );
 }

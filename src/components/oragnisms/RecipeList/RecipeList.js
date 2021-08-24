@@ -1,11 +1,14 @@
-import RecipeListItem from 'components/molecules/RecipeListItem/RecipeListItem';
 import { StyledTitle } from './RecipeList.styles'
+import recipes from 'data/data';
+import RecipeListItem from 'components/molecules/RecipeListItem/RecipeListItem';
 
-const RecipeList = () => {
+const RecipeList = ({ setSelectedRecipe }) => {
     return ( 
         <div>
             <StyledTitle>Recipes</StyledTitle>
-            <RecipeListItem />
+            {recipes.map((recipeData) => (
+                <RecipeListItem recipeData={recipeData} setSelectedRecipe={setSelectedRecipe} />
+            ))}
         </div>
      );
 }

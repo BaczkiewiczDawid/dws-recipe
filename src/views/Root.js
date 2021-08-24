@@ -2,7 +2,7 @@ import Dashboard from 'views/dashboard/Dashboard';
 
 function App() {
   return (
-    <Dashboard />
+      <Dashboard />
   );
 }
 
