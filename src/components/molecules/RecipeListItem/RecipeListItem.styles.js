@@ -2,12 +2,19 @@ import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
     border-bottom: 1px solid rgba(42, 42, 42, .2);
-    width: 400px;
+    width: 200px;
     height: auto;
     cursor: pointer;
+    margin-left: 2rem;
+    white-space: nowrap;
 
-    &:nth-child(2) {
-        margin-top: 5rem;
+    @media screen and (min-width: 768px) {
+        border-bottom: 1px solid rgba(42, 42, 42, .2);
+        width: 400px;
+
+        &:nth-child(2) {
+            margin-top: 5rem;
+        }
     }
 `;
 

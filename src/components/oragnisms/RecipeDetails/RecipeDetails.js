@@ -1,20 +1,24 @@
 import recipes from 'data/data';
-import { StyledPreparation, StyledTitle, StyledHeader } from './RecipeDetails.styled';
+import { StyledPreparation, StyledTitle, StyledHeader, StyledWrapper, StyledList, StyledBox, StyledButton } from './RecipeDetails.styled';
 import IngredientsList from 'components/atoms/IngredientsList/IngredientsList';
 
-const RecipeDetails = ({ selectedRecipe }) => {
+const RecipeDetails = ({ selectedRecipe, isMobile, isOpen }) => {
+
     return ( 
-        <div>
+        <StyledWrapper isOpen={isOpen}>
+        <StyledBox>
             <StyledHeader>Details</StyledHeader>
-            <div>
-                <StyledTitle>Ingredients</StyledTitle>
-                <ul>
-                    <IngredientsList selectedRecipe={selectedRecipe} />
-                </ul>
-            </div>
-            <StyledTitle>Preparation</StyledTitle>
-            <StyledPreparation>{recipes[selectedRecipe].preparation}</StyledPreparation>
+            {isMobile && <StyledButton>X</StyledButton>}
+        </StyledBox>
+        <div>
+            <StyledTitle>Ingredients</StyledTitle>
+            <StyledList>
+                <IngredientsList selectedRecipe={selectedRecipe} />
+            </StyledList>
         </div>
+        <StyledTitle>Preparation</StyledTitle>
+        <StyledPreparation>{recipes[selectedRecipe].preparation}</StyledPreparation>
+    </StyledWrapper>
      );
 }
  
