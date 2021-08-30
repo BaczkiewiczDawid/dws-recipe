@@ -58,4 +58,5 @@ export const StyledButton = styled.button`
     border-radius: 25px;
     margin-top: 3%;
     margin-right: 10vw;
+    cursor: pointer;
 `;

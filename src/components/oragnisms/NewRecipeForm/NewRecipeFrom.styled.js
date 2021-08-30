@@ -24,3 +24,8 @@ export const StyledButton = styled.button`
     margin-top: 2rem;
     cursor: pointer;
 `;
+
+export const StyledSelect = styled.select`
+    width: 100px;
+    margin-top: 1rem;
+`;

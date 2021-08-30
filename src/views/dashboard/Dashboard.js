@@ -16,7 +16,7 @@ const Dashboard = () => {
             <Navbar />
             <StyledWrapper >
                 <RecipeList setSelectedRecipe={setSelectedRecipe} isMobile={isMobile} setIsOpen={setIsOpen} />
-                <RecipeDetails selectedRecipe={selectedRecipe} isMobile={isMobile} isOpen={isOpen} />
+                <RecipeDetails selectedRecipe={selectedRecipe} isMobile={isMobile} isOpen={isOpen} setIsOpen={setIsOpen} />
             </StyledWrapper>
         </>
      );
